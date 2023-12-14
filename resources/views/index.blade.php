@@ -29,9 +29,9 @@ laravel-migration-seeder
                     <td class="text-success fw-medium">{{ $train->orario_di_partenza }}</td>
                     <td>{{ $train->stazione_di_arrivo }}</td>
                     <td class="text-success fw-medium">{{ $train->orario_di_arrivo }}</td>
-                    <td class="text-center">{{ $train->codice_treno }}</td>
-                    <td class="text-center">{{ $train->numero_carrozze }}</td>
-                    <td class="text-center">{{ $train->in_orario }}</td>
+                    <td>{{ $train->codice_treno }}</td>
+                    <td>{{ $train->numero_carrozze }}</td>
+                    <td>{{ $train->in_orario }}</td>
                     <td class="text-center">{{ $train->cancellato }}</td>
                 </tr>               
             @empty
