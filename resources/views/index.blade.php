@@ -12,8 +12,8 @@ laravel-migration-seeder
           <tr>
             <th scope="col">Azienda</th>
             <th scope="col">Partenza</th>
-            <th scope="col">Arrivo</th>
             <th scope="col">Orario partenza</th>
+            <th scope="col">Arrivo</th>
             <th scope="col">Orario arrivo</th>
             <th scope="col">Codice treno</th>
             <th scope="col">Numero carrozze</th>
@@ -26,8 +26,8 @@ laravel-migration-seeder
                 <tr>
                     <td class="text-danger fw-medium">{{ $train->azienda }}</td>
                     <td>{{ $train->stazione_di_partenza }}</td>
-                    <td>{{ $train->stazione_di_arrivo }}</td>
                     <td class="text-success fw-medium">{{ $train->orario_di_partenza }}</td>
+                    <td>{{ $train->stazione_di_arrivo }}</td>
                     <td class="text-success fw-medium">{{ $train->orario_di_arrivo }}</td>
                     <td class="text-center">{{ $train->codice_treno }}</td>
                     <td class="text-center">{{ $train->numero_carrozze }}</td>
@@ -35,7 +35,7 @@ laravel-migration-seeder
                     <td class="text-center">{{ $train->cancellato }}</td>
                 </tr>               
             @empty
-                
+                <p>Nessun treno disponibile</p>
             @endforelse
         </tbody>
       </table>
