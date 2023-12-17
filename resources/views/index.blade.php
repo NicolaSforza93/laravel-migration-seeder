@@ -17,10 +17,10 @@ laravel-migration-seeder
             <th scope="col">Azienda</th>
             <th scope="col">Partenza</th>
             <th scope="col">Arrivo</th>
-            <th scope="col">Codice treno</th>
-            <th scope="col">Numero carrozze</th>
-            <th scope="col">In orario</th>
-            <th scope="col">Cancellato</th>
+            <th scope="col" class="text-center">Codice treno</th>
+            <th scope="col" class="text-center">Numero carrozze</th>
+            <th scope="col" class="text-center">In orario</th>
+            <th scope="col" class="text-center">Cancellato</th>
           </tr>
         </thead>
         <tbody class="table-group-divider">
@@ -38,7 +38,7 @@ laravel-migration-seeder
                     <td class="text-center">{{ $train->codice_treno }}</td>
                     <td class="text-center">{{ $train->numero_carrozze }}</td>
                     <td class="text-center">{{ $train->in_orario }}</td>
-                    <td class="text-center">{{ $train->cancellato }}</td>
+                    <td @class(['text-center', 'text-danger' => $train->cancellato == 'si', 'fw-bold' => $train->cancellato == 'si'])>{{ $train->cancellato }}</td>
                 </tr>               
             @empty
                 <p>Nessun treno disponibile</p>
